@@ -1,7 +1,19 @@
+:root
+{
+    --couleur-fond: rgb(231, 217, 198);
+    --couleur-secondaire: antiquewhite;
+    --couleur-boutton: royalblue;
+    --bordure: 50%;
+    --transform: scale(1.1);
+    --transition: all 0.3s  ease;
+    --ombre:0px 30px 10px rgba(0,0,0,0.1);
+
+    
+}
 body
 {
     font-family:'Poppins', 'Times New Roman', Times, serif;
-    background-color:rgb(231, 217, 198);
+    background-color: var(--couleur-fond);
     font-size: x-large;
 }
 nav
@@ -29,19 +41,20 @@ h2
 h1
 {
     text-align: center;
-    color: royalblue;
+    color: var(--couleur-boutton);
 }
 .image
 {
     border-radius:55%;
     width: 500px;
     height: 360px;
-     margin-left: 100px;
+    margin-left: 100px;
+    
     box-shadow: 10px 4px 10px rgba(0,0,0,0.3);
     
    /* transition: 0.3s; */
 }
-.image:hover
+img:hover
 {
     transform: scale(1.1);
 }
@@ -75,7 +88,7 @@ table
 .footer
 {
     display: flex;
-    background-color:antiquewhite;
+    background-color: var(--couleur-secondaire);
     height: 130px;
     width: 100%;
     padding: 0px;
@@ -83,6 +96,21 @@ table
     position: fixed;
     bottom: 0%;
    
+}
+table
+{
+    width: 80%;
+    border-radius: var(--bordure);
+}
+th
+{
+    background-color: var(--couleur-boutton);
+     border-radius: 10%;
+}
+td
+{
+    background-color: var(--couleur-secondaire);
+    border-radius: 10%;
 }
 a
 {
