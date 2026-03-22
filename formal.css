@@ -10,6 +10,55 @@
 
     
 }
+@keyframes apparaitre {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .contenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image {
+    width: 250px;
+    height: 200px;
+    margin-left: 0;
+  }
+
+  .presentation {
+    width: 100%;
+    padding: 15px;
+  }
+
+  ul {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
+  article {
+    width: 90%;
+  }
+
+  .footer {
+    position: relative;
+    margin-top: 20px;
+  }
+}
+h1 {
+  animation: apparaitre 0.8s ease forwards;
+}
+
+.image {
+  animation: apparaitre 1s ease forwards;
+  transition: var(--transition);
+}
 body
 {
     font-family:'Poppins', 'Times New Roman', Times, serif;
